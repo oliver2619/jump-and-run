@@ -1,0 +1,161 @@
+$animation-duration: 200ms;
+
+@keyframes scale-x-in {
+    from {
+        transform: scaleX(0);
+    }
+
+    66% {
+        transform: scaleX(1.4);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes scale-in {
+    from {
+        transform: scale(0);
+    }
+
+    33% {
+        transform: scale(1.4);
+    }
+
+    66% {
+        transform: scale(0.9);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        filter: blur(1em);
+    }
+
+    to {
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+
+@keyframes fade-and-scale-in {
+    from {
+        transform: scale(0);
+        opacity: 0;
+        filter: blur(1em);
+    }
+
+    33% {
+        transform: scale(1.4);
+    }
+
+    66% {
+        transform: scale(0.9);
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+        filter: blur(0px);
+    }
+
+    to {
+        opacity: 0;
+        filter: blur(1em);
+    }
+}
+
+@keyframes emphasis {
+    from {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(2.5);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@mixin scale-x-in {
+    animation-name: scale-x-in;
+    animation-duration: $animation-duration;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+}
+
+@mixin scale-in {
+    animation-name: scale-in;
+    animation-duration: $animation-duration;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+}
+
+@mixin fade-in {
+    animation-name: fade-in;
+    animation-duration: $animation-duration;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+}
+
+@mixin fade-and-scale-in {
+    animation-name: fade-and-scale-in;
+    animation-duration: $animation-duration;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+}
+
+@mixin fade-out {
+    animation-name: fade-out;
+    animation-delay: 0ms !important;
+    animation-duration: $animation-duration * 2;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+}
+
+@mixin emphasis {
+    animation-name: emphasis;
+    animation-delay: 0ms !important;
+    animation-duration: $animation-duration;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+}
+
+@mixin animation-delay($delay) {
+    animation-delay: $animation-duration * $delay;
+}
+
+.delay-1 {
+    @include animation-delay(1);
+}
+
+.delay-2 {
+    @include animation-delay(2);
+}
+
+.delay-3 {
+    @include animation-delay(3);
+}
+
+.delay-4 {
+    @include animation-delay(4);
+}
+
+.delay-5 {
+    @include animation-delay(5);
+}

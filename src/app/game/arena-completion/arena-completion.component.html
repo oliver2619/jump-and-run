@@ -1,0 +1,18 @@
+<jr-menu-page [fading]="true" [close-action]="closeAction">
+    <h1 jrTranslation="game.levelCompleted" class="delay-1"></h1>
+    <table class="delay-2">
+        <tr>
+            <th>Sterne</th>
+            <td><jr-count-up-value [value]="5"></jr-count-up-value></td>
+        </tr>
+        <tr>
+            <th>Edelsteine</th>
+            <td><jr-count-up-value [value]="1"></jr-count-up-value></td>
+        </tr>
+        <tr>
+            <th>Gegner</th>
+            <td><jr-count-up-value [value]="72"></jr-count-up-value></td>
+        </tr>
+    </table>
+    <button type="button" (click)="onContinue()" jrTranslation="game.continue" class="delay-3"></button>
+</jr-menu-page>

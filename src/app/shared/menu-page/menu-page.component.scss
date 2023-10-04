@@ -1,0 +1,19 @@
+@import '../../../style/menu.scss';
+
+:host {
+    @include menu-page;
+
+    &.fading {
+        @include fade-and-scale-in;
+        min-width: 0;
+        min-height: 0;
+    
+        &.closing {
+            @include fade-out;
+        }
+    }
+}
+
+.content {
+    @include menu-content;
+}

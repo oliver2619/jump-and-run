@@ -1,0 +1,7 @@
+<jr-menu-page [fading]="true" [close-action]="closeAction">
+    <h1 jrTranslation="game.pause" class="delay-1"></h1>
+    <div class="button-list">
+        <button type="button" (click)="onContinue()" jrTranslation="game.continue" class="delay-2"></button>
+        <button type="button" (click)="onAbort()" jrTranslation="game.abort" class="delay-3"></button>
+    </div>
+</jr-menu-page>

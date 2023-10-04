@@ -1,0 +1,49 @@
+@import "./shared.scss";
+@import "./animations.scss";
+
+@mixin button {
+    @include scale-x-in;
+    cursor: pointer;
+    border: 1px solid $color-2;
+    border-radius: 3em;
+    box-shadow: 0 0 0.3em $color-2, inset 0 0 0.3em $color-5;
+    padding: 0.2em 0.8em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: $color-1;
+    text-shadow: 0 0 2.5px $color-1;
+    background-color: $color-4;
+    transition: background-color 800ms, box-shadow 800ms, transform 200ms;
+
+    &:hover {
+        background-color: $color-5;
+        box-shadow: 0 0 0.3em $color-2, inset 0 0 0.3em $color-4;
+        transition: background-color 200ms, box-shadow 200ms, transform 200ms;
+        transform: scale(1.2);
+    }
+
+    &:disabled {
+        cursor: default;
+        box-shadow: 0 0 0.3em $color-4, inset 0 0 0.3em $color-5;
+        color: $color-3;
+        text-shadow: 0 0 2.5px $color-2;
+        background-color: $color-4;
+    }
+}
+
+button {
+    @include button;
+}
+
+.button-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 1em;
+
+    &.vertical {
+        flex-direction: column;
+        row-gap: 1em;
+    }
+}

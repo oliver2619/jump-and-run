@@ -1,0 +1,32 @@
+@import "./shared.scss";
+@import "./animations.scss";
+@import "./button.scss";
+
+@mixin menu-page {
+    box-sizing: border-box;
+    min-width: 40em;
+    min-height: 40ex;
+    border: 1px solid $color-1;
+    border-radius: 1em;
+    box-shadow: 0 0 1em $color-1, inset 0 0 2em $color-2;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: stretch;
+    color: $color-2;
+    background-color: $color-5;
+}
+
+@mixin menu-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 1em;
+    flex-grow: 1;
+
+    &.fade-out {
+        @include fade-out;
+    }
+}

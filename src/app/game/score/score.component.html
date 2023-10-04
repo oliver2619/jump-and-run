@@ -1,0 +1,30 @@
+<jr-menu-page [close-action]="closeAction">
+    <h1 jrTranslation="game.score"></h1>
+    <div class="content">
+        <table class="delay-1">
+            <tr>
+                <th>Münzen</th>
+                <td><jr-count-up-value [value]="30"></jr-count-up-value></td>
+            </tr>
+            <tr>
+                <th>Sterne</th>
+                <td><jr-count-up-value [value]="1254" [step]="10.723"></jr-count-up-value></td>
+            </tr>
+            <tr>
+                <th>Edelsteine</th>
+                <td><jr-count-up-value [value]="45"></jr-count-up-value></td>
+            </tr>
+        </table>
+        <table class="delay-1">
+            <tr>
+                <th>Punkte</th>
+                <td><jr-count-up-value [value]="3"></jr-count-up-value></td>
+            </tr>
+            <tr>
+                <th>Sonst</th>
+                <td><jr-count-up-value [value]="0"></jr-count-up-value></td>
+            </tr>
+        </table>
+    </div>
+    <button type="button" (click)="onBack()" class="delay-2" jrTranslation="menu.back"></button>
+</jr-menu-page>

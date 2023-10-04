@@ -1,0 +1,10 @@
+<jr-menu-page [close-action]="closeAction">
+    <h1>Jump and run</h1>
+    <div class="button-list vertical">
+        <button type="button" (click)="onContinue()" [disabled]="!continueEnabled" class="delay-1" jrTranslation="menu.continue"></button>
+        <button type="button" (click)="onNew()" class="delay-2" jrTranslation="menu.newGame">New</button>
+        <button type="button" (click)="onSettings()" class="delay-3" jrTranslation="menu.settings">Settings</button>
+        <button type="button" (click)="onCredits()" class="delay-4" jrTranslation="menu.credits">Credits</button>
+    </div>
+    <div></div>
+</jr-menu-page>

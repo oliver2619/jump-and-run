@@ -1,0 +1,12 @@
+@import '../../../style/animations.scss';
+
+:host {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    &.finished * {
+        @include emphasis;
+    }
+}

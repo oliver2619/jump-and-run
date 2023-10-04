@@ -1,0 +1,52 @@
+$font-family: Segoe UI;
+$font-size: 4vh;
+$font-weight: normal;
+
+$color-1: #000000;
+$color-2: #008060;
+$color-3: #00c090;
+$color-4: #80e0a8;
+$color-5: #ffffff;
+
+@mixin font($size) {
+    font-family: $font-family;
+    font-size: $font-size * $size;
+    font-weight: $font-weight;
+}
+
+@mixin text {
+    @include font(1);
+    color: $color-1;
+    text-shadow: 0 0 4px $color-2;
+}
+
+table {
+    border-collapse: collapse;
+
+    td {
+        color: $color-2;
+        text-shadow: 0 0 4px $color-3;
+    }
+
+    th {
+        @include text;
+    }
+
+    th,
+    td {
+        @include font(1);
+        border-bottom: 1px solid $color-4;
+        padding: 0.5ex 0.5em;
+        text-align: start;
+    }
+}
+
+h1 {
+    color: $color-3;
+    text-shadow: 0 0 4px $color-1;
+    font-weight: bold;
+}
+
+p {
+    @include text;
+}

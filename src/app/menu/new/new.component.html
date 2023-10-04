@@ -1,0 +1,8 @@
+<jr-menu-page [close-action]="closeAction">
+    <h1 jrTranslation="menu.newGame"></h1>
+    <p class="delay-1" jrTranslation="menu.newGame.question"></p>
+    <div class="button-list">
+        <button type="button" (click)="onStart()" class="delay-2" jrTranslation="menu.start"></button>
+        <button type="button" (click)="onCancel()" class="delay-3" jrTranslation="menu.cancel"></button>
+    </div>
+</jr-menu-page>

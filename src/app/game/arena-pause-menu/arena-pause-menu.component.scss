@@ -1,0 +1,5 @@
+@import '../../../style/game.scss';
+
+:host {
+    @include game-dialog;
+}
